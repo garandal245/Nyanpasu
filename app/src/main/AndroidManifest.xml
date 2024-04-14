@@ -49,6 +49,22 @@
             </intent-filter>
         </activity>
 
+        <activity android:name="androidx.test.core.app.InstrumentationActivityInvoker$BootstrapActivity"
+            android:exported="true">
+            <!-- Intent filters and other activity attributes -->
+        </activity>
+
+        <activity android:name="androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity"
+            android:exported="true">
+            <!-- Intent filters and other activity attributes -->
+        </activity>
+
+        <activity android:name="androidx.test.core.app.InstrumentationActivityInvoker$EmptyFloatingActivity"
+            android:exported="true">
+            <!-- Intent filters and other activity attributes -->
+        </activity>
+
+
     </application>
 
 </manifest>
