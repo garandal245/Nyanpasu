@@ -52,6 +52,7 @@ class ReleasesListAdapter(private val showActions: Boolean = true): RecyclerView
         //private val id: TextView = view.findViewById(R.id.release_id)
         private val title: TextView = view.findViewById(R.id.release_title)
         private val releaseDate: TextView = view.findViewById(R.id.release_date)
+        private val size: TextView = itemView.findViewById(R.id.release_size)
         private val magnetBtn: View = view.findViewById(R.id.magnet_btn)
         private val downloadBtn: View = view.findViewById(R.id.download_btn)
 
@@ -153,8 +154,13 @@ class ReleasesListAdapter(private val showActions: Boolean = true): RecyclerView
             itemData = item
             //id.text = item.id.toString()
             title.text = item.name
-            releaseDate.text = releaseDate.context.getString(R.string.release_date,
-                DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.SHORT).format(Date(item.timestamp * 1000)))
+            releaseDate.text = releaseDate.context.getString(
+                R.string.release_date,
+                DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.SHORT)
+                    .format(Date(item.timestamp * 1000))
+            )
+
+            size.text = "Size: ${item.releaseSize}"
         }
     }
 

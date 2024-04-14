@@ -199,6 +199,9 @@ class NyaaReleaseActivity : AppCompatActivity() {
                 R.string.release_date,
                 DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.SHORT).format(Date(nyaaRelease.timestamp * 1000)))
 
+            val releaseSizeView2 = findViewById<TextView>(R.id.date)
+            releaseSizeView2.text = getString(R.string.release_size, nyaaRelease.releaseSize)
+
             val seeders = findViewById<ReleaseDataItemView>(R.id.seeders)
             seeders.setValue(nyaaRelease.seeders.toString())
 
